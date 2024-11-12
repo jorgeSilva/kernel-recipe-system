@@ -13,6 +13,22 @@ If you are developing a production application, we recommend updating the config
 
 - Configure the top-level `parserOptions` property like this:
 
+## Como rodar o projeto após clonar
+
+Dentro da pasta projeto após ter ele já clonado. Fazemos a instalação da NodeModules com todas as dependencias do projeto:
+
+Rodamos o seguinte comando no terminal referente a pasta do projeto:
+
+- npm install
+
+Agora com  NodeModules podemos inicializar o projeto com o seguinte comando:
+
+- npm run dev
+
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+
+- Configure the top-level `parserOptions` property like this:
+
 ```js
 export default tseslint.config({
   languageOptions: {
