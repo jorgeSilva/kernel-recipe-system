@@ -1,4 +1,3 @@
-import React from 'react'
 import style from './InputSearchHomeComponent.module.css'
 import InputSearch from '../inputSearch/InputSearch'
 

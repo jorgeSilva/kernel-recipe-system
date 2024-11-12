@@ -1,4 +1,3 @@
-import React from 'react'
 import iconDetailsButton from '../../assets/home/Vector-1.svg'
 import style from './cardsCategoriesRecipes.module.css'
 import { useNavigate } from 'react-router-dom';

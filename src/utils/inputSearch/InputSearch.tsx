@@ -1,4 +1,3 @@
-import React from 'react'
 import style from './InputSearch.module.css'
 import iconSearchButton from '../../assets/home/Vector.svg'
 import { useProviderInputSearch } from '../../context/InputSearchHomeContext'

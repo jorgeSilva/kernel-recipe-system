@@ -16,8 +16,6 @@ const Details = () => {
     handleFetchRecipe, 
    } = useProviderDetails()
 
-  console.log(dataRecipe?.meals)
-
   React.useEffect(() => {
     document.title = "Receitas | Detalhes"
     if(typeof _id === 'string' ){
