@@ -1,0 +1,44 @@
+.card_categories_card{
+  background-color: var(--c2);
+  border-radius: 1.25rem;
+  display: inline-flex;
+  flex-direction: column; 
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border: none;
+  transition: .3s ease;
+}
+
+.card_categories_card_active{
+  background-color: var(--c2);
+  border-radius: 1.25rem;
+  display: inline-flex;
+  flex-direction: column; 
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border: none;
+  transition: .3s ease;
+}
+
+.card_categories_card_img{
+  max-width: 183px;
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+}
+
+.card_categories_card_name{
+  background-color: var(--p2);
+  color: var(--c0);
+  border-bottom-right-radius: 1.25rem;
+  border-bottom-left-radius: 1.25rem;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.card_categories_card:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.card_categories_card:not(:hover) {
+  opacity: .7;
+}

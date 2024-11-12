@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 400;
+}
+/* Estilização da barra de rolagem para Chrome, Edge e Safari */
+::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem */
+  height: 8px; /* Altura da barra de rolagem para a horizontal */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Cor do "trilho" da barra de rolagem */
+  border-radius: 4px; /* Borda arredondada para o trilho */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0; /* Cor do "polegar" da barra de rolagem */
+  border-radius: 4px;
+  border: 2px solid #f0f0f0; /* Cria um espaço ao redor do polegar, dando um efeito de margem */
+}
+
+/* Barra de rolagem ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilização para o Firefox */
+* {
+  scrollbar-width: thin; /* Define a largura da barra como "fina" */
+  scrollbar-color: #c0c0c0 #f0f0f0; /* Define a cor do polegar e do trilho */
+}
+
+:root{
+  --c0:  #fff;
+  --c1:  #fcfcfc;
+  --c2:  #f8f8f8;
+  --c3:  #f4f4f4;
+  --c4:  #f0f0f0;
+  --c5:  #e8e8e8;
+  --c6:  #e0e0e0;
+  --c7:  #d4d4d4;
+  --c8:  #c8c8c8;
+  --c9:  #808080;
+  --c10: #707070;
+  --c11: #505050;
+  --c12: #404040;
+  --c13: #2c2c2c;
+  --c14: #282828;
+  --c15: #202020;
+  --c16: #181818;
+  --c17: #000;
+  --p1: #CB1B16;
+  --p2: #EF3C2D;
+  --p3: #F26A4F;
+  --font-title-h1-lg: 3.25rem;
+  --font-title-h1-n: 2.75rem;
+  --font-title-h1-m: 2.25rem;
+  --font-title-h1-sm: 1.75rem;
+}
+
+.home_discovery_container{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1.25rem;
+  margin: 2rem 0;
+  min-height: 80vh;
+}
+
+.home_discovery_content{
+  grid-column: 3 / 11;
+}
+
+
+@media (max-width: 890px) {
+  .home_discovery_content{
+    grid-column: 2 / 12;
+  }
+}
+
+@media (max-width: 550px) {
+  .home_discovery_content{
+    grid-column: 1 / -1;
+    padding: 0 1rem;
+  }
+}
+
+.input_search_home_title{
+  font-family: "Chilanka", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--p2);
+  font-size: var(--font-title-h1-lg);
+}
+
+@media (max-width: 1670px) {
+  .input_search_home_title{
+    font-size: var(--font-title-h1-n);
+  }
+}
+
+@media (max-width: 1355px) {
+  .input_search_home_title{
+    font-size: var(--font-title-h1-m);
+  }
+}
+
+@media (max-width: 1150px) {
+  .input_search_home_title{
+    font-size: var(--font-title-h1-sm);
+  }
+}
+
+.preview_loading{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.preview_iten{
+  width: 183px;
+  height: 170px;
+  background-color: #808080;
+  border-radius: 1.25rem;
+  animation-duration: 2.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: shimmer;
+  animation-timing-function: linear;
+  background: #ddd;
+  padding: 1rem;
+  background: linear-gradient(to right, var(--c9) 8%, var(--c10) 18%, var(--c4) 33%);
+  background-size: 1200px 100%;
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+      background-position: -100% 0;
+  }
+  100% {
+      background-position: 100% 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+      background-position: -1200px 0;
+  }
+  100% {
+      background-position: 1200px 0;
+  }
+}
+
+.content_loader{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.loader:before , .loader:after{
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3) inset;
+}
+.loader:after {
+  box-shadow: 0 2px 0 #FF3D00 inset;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {  transform: rotate(0)}
+  100% { transform: rotate(360deg)}
+}

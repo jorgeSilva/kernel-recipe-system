@@ -1,0 +1,88 @@
+.details_content_go_back span{
+  padding-right: .75rem;
+}
+
+.details_content_recipe{
+  padding-top: 2rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 2fr 3fr;
+}
+
+.details_title_recipe{
+  grid-row: 1;
+  grid-column: 1 / -1;
+  font-size: 3.25rem;
+  font-family: "Chilanka", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--p3);
+  padding-bottom: 1rem;
+}
+
+.details_content_img{
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
+
+.details_img_recipe img{
+  width: 100%;
+  height: 214px;
+  object-fit: cover;
+  object-position: center; 
+  border-radius: 1.25rem;
+}
+
+.details_content_ingredients{
+  padding-left: 2rem;
+  grid-column: 2 / -1 ;
+  grid-row: 2;
+}
+
+.details_h2{
+  font-size: 1.5rem;
+  color: var(--c12);
+}
+
+.details_ingredients_list{
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.details_ingredients_list li{
+  padding-right: 2.5rem;
+}
+
+.details_content_instructions{
+  grid-row: 3;
+  grid-column: 1 / -1;
+  text-align: justify;
+}
+
+@media (max-width: 810px) {
+  .details_title_recipe{
+    font-size: 2.75rem;
+  }
+}
+
+@media (max-width: 670px) {
+  .details_content_recipe{
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  .details_content_img{
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+  
+  .details_content_ingredients{
+    grid-column: 1 / -1 ;
+    grid-row: 2;
+  }
+  
+  .details_content_instructions{
+    grid-row: 4;
+  }
+}

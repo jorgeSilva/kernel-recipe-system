@@ -1,0 +1,35 @@
+.input_search_home_content{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  column-gap: 1.25rem;
+}
+
+.input_search_home_h1{
+  grid-column: 1 / 4;
+  width: 15ch;
+}
+
+.input_search_home_input_container{
+  grid-column: 4 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 875px) {
+  .input_search_home_content{
+    grid-template-rows: auto auto;
+    gap: .5rem;
+  }
+  
+  .input_search_home_h1{
+    grid-row: 1;
+    grid-column: 1 / -1;
+    width: auto;
+  }
+  
+  .input_search_home_input_container{
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
