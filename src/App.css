@@ -64,6 +64,10 @@
   --font-title-h1-sm: 1.75rem;
 }
 
+body{
+  position: relative;
+}
+
 .home_discovery_container{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
