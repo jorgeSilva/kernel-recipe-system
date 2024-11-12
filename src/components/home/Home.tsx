@@ -27,6 +27,9 @@ const Home = () => {
   } = useProviderCategory()
 
   React.useEffect(() => {
+
+    document.title = "Receitas | Home"
+
     handleDataCategoryTypes()
   }, [])
 
