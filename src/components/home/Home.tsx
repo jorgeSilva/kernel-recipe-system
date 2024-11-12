@@ -18,15 +18,11 @@ const Home = () => {
 
   const {
     dataCategories,
-    dataRecipeCategories,
     cardNameOption,
     loadingRecipeCategories,
     errorCategories,
     handleDataCategoryTypes,
   } = useProviderCategory()
-
-  console.log(dataSearchRecipe)
-  console.log(dataRecipeCategories)
 
   React.useEffect(() => {
     handleDataCategoryTypes()

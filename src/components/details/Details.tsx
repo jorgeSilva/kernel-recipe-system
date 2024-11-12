@@ -16,8 +16,6 @@ const Details = () => {
     handleFetchRecipe, 
    } = useProviderDetails()
 
-  console.log(dataRecipe)
-  
   React.useEffect(() => {
     if(typeof _id === 'string' ){
       handleFetchRecipe(_id)
@@ -43,7 +41,7 @@ const Details = () => {
           <p>{error}</p> : loading ? 
           <div className='content_loader'><span className="loader"></span></div> : dataRecipe &&
           dataRecipe.meals.map((item) => (
-            <section className={style.details_content_recipe}>
+            <section key={item.idMeal} className={style.details_content_recipe}>
               <h1 className={style.details_title_recipe}>
                 { item.strMeal } - {item.strArea}
               </h1>
