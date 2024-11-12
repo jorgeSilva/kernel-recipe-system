@@ -5,6 +5,7 @@ import { useProviderInputSearch } from '../../context/InputSearchHomeContext'
 import { useProviderCategory } from '../../context/categoryHomeContext'
 import CardCollectionComponent from '../../utils/cardsCategoriesComponent/CardCategoriesComponent'
 import CardInputComponent from '../../utils/cardsInputComponent/CardInputComponent'
+import CardsCategoriesRecipesComponent from '../../utils/cardsCategoriesRecipesComponent/CardsCategoriesRecipesComponent'
 
 const Home = () => {
 
@@ -18,6 +19,7 @@ const Home = () => {
 
   const {
     dataCategories,
+    dataRecipeCategories,
     cardNameOption,
     loadingRecipeCategories,
     errorCategories,
@@ -56,13 +58,28 @@ const Home = () => {
             )
           }
         </section>
+        
+        {
+          dataRecipeCategories &&
+          <>
+            <h2 className={style.home_content_itens_category_title}>
+              Encontrados pela categoria: <span style={{color: "var(--p2)"}}>"{cardNameOption}"</span>
+            </h2>
+            <section className={style.home_content_itens_input_search}>
+              {
+                dataRecipeCategories.meals.map((item) => (
+                  <CardsCategoriesRecipesComponent key={item.idMeal} {...item} />
+                ))}
+            </section>
+          </>
+        }
 
         <section>
           <h2 className={style.home_content_itens_category_title}>
             {
               cardNameOption ? 
               <>
-                Categoria: <span style={{color: "var(--p2)"}}>"{cardNameOption}"</span>
+                Categoria selecionada: <span style={{color: "var(--p2)"}}>"{cardNameOption}"</span>
               </> :
               <>
                 Categorias
@@ -98,6 +115,8 @@ const Home = () => {
             )
           }
         </section>
+
+
       </section>
     </section>
     

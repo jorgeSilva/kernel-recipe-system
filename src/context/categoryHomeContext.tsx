@@ -76,6 +76,8 @@ export const CategoryContext = ({ children }: React.PropsWithChildren) => {
     }
   }
 
+  console.log(dataRecipeCategories)
+
   return (
     <CategoryHomeContext.Provider value={{
       dataCategories,

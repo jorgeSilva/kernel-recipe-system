@@ -3,7 +3,7 @@ import style from './CardInputComponent.module.css'
 import iconDetailsButton from '../../assets/home/Vector-1.svg'
 import { useNavigate } from 'react-router-dom';
 
-type TMeal = {
+export type TMeal = {
     dateModified: string;
     idMeal: string;
     strArea: string;
